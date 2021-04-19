@@ -1,5 +1,13 @@
+import autumn.AutumnGrpc;
+import autumn.AutumnOuterClass;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import spring.SpringGrpc;
+import spring.SpringOuterClass;
+import summer.Summe;
+import summer.SummerGrpc;
+import winter.WinterGrpc;
+import winter.WinterOuterClass;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -11,9 +19,71 @@ public class MainClass {
 
         if (validation(date)) {
             ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 3000).usePlaintext().build();
+
+            int month = Integer.parseInt(date.split("/")[0]);
+            int day = Integer.parseInt(date.split("/")[1]);
+            int year = Integer.parseInt(date.split("/")[2]);
+            switch (month) {
+                case 12:
+                case 1:
+                case 2:
+                    WinterGrpc.WinterBlockingStub winterBlockingStub = WinterGrpc
+                            .newBlockingStub(channel);
+                    WinterOuterClass.ZodiacResponse zodiacWinter =  winterBlockingStub
+                            .getZodiacSign(
+                            WinterOuterClass.ZodiacRequest
+                                    .newBuilder()
+                                    .setMonth(Integer.toString(month))
+                                    .setDay(Integer.toString(day))
+                                    .setYear(Integer.toString(year)).build());
+                    System.out.println(zodiacWinter.getZodiacSign());
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    SpringGrpc.SpringBlockingStub springBlockingStub = SpringGrpc
+                            .newBlockingStub(channel);
+                    SpringOuterClass.ZodiacResponse zodiacSpring =  springBlockingStub
+                            .getZodiacSign(
+                                    SpringOuterClass.ZodiacRequest
+                                            .newBuilder()
+                                            .setMonth(Integer.toString(month))
+                                            .setDay(Integer.toString(day))
+                                            .setYear(Integer.toString(year)).build());
+                    System.out.println(zodiacSpring.getZodiacSign());
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    SummerGrpc.SummerBlockingStub summerBlockingStub = SummerGrpc
+                            .newBlockingStub(channel);
+                    Summe.ZodiacResponse zodiacSummer = summerBlockingStub
+                            .getZodiacSign(
+                                    Summe.ZodiacRequest
+                                            .newBuilder()
+                                            .setMonth(Integer.toString(month))
+                                            .setDay(Integer.toString(day))
+                                            .setYear(Integer.toString(year)).build());
+                    System.out.println(zodiacSummer.getZodiacSign());
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    AutumnGrpc.AutumnBlockingStub autumnBlockingStub = AutumnGrpc
+                            .newBlockingStub(channel);
+                    AutumnOuterClass.ZodiacResponse zodiacAutumn = autumnBlockingStub
+                            .getZodiacSign(
+                                    AutumnOuterClass.ZodiacRequest
+                                            .newBuilder()
+                                            .setMonth(Integer.toString(month))
+                                            .setDay(Integer.toString(day))
+                                            .setYear(Integer.toString(year)).build());
+                    System.out.println(zodiacAutumn.getZodiacSign());
+                    break;
+            }
         }
         else {
-
+            System.out.println("Invalid data");
         }
     }
 
@@ -41,80 +111,18 @@ public class MainClass {
     }
 
     public static boolean validation(String date) {
+        String[] dateNumbers = date.split("/");
+        int month = Integer.parseInt(dateNumbers[0]);
+        int day = Integer.parseInt(dateNumbers[1]);
+        int year = Integer.parseInt(dateNumbers[2]);
 
-        if ((date.charAt(1) == '/' && date.charAt(3) == '/') ||
-                (date.charAt(1) == '/' && date.charAt(4) == '/')) {
-
-            String[] numbers = date.split("/");
-
-            int month = Integer.parseInt(numbers[0]);
-            int day = Integer.parseInt(numbers[1]);
-            int year = Integer.parseInt(numbers[2]);
-
-            if (1 > month || month > 12) {
-                return false;
-            }
-
-            if (month == 2 && year % 4 == 0) {
-                if (day > getMonthDays().get(month) + 1) {
-                    return false;
-                }
-            }
-            if (day > getMonthDays().get(month)) {
-                return false;
-            }
-
-            if (day < 1) {
-                return false;
-            }
-
-            return year >= 0;
+        if (month >= 1 && month <= 12
+                && day <= getMonthDays().get(month)
+                && year % 4 == 1) {
+            return true;
         }
-
-        if (date.charAt(2) == '/' && date.charAt(4) == '/') {
-
-            String[] numbers = date.split("/");
-
-            String monthStr = numbers[0];
-            String dayStr = numbers[1];
-            int year = Integer.parseInt(numbers[2]);
-
-            int month;
-            if (monthStr.charAt(0) == '0') {
-                month = monthStr.charAt(1);
-            }
-            else {
-                month = Integer.parseInt(monthStr);
-            }
-
-            int day;
-            if (dayStr.charAt(0) == '0') {
-                day = dayStr.charAt(1);
-            }
-            else {
-                day = Integer.parseInt(dayStr);
-            }
-
-            if (1 > month || month > 12) {
-                return false;
-            }
-
-            if (month == 2 && year % 4 == 0) {
-                if (day > getMonthDays().get(month) + 1) {
-                    return false;
-                }
-            }
-            if (day > getMonthDays().get(month)) {
-                return false;
-            }
-
-            if (day < 1) {
-                return false;
-            }
-
-            return year >= 0;
-        }
-
-        return true;
+        return month == 2
+                && day <= getMonthDays().get(month) + 1
+                && year % 4 == 0;
     }
 }
