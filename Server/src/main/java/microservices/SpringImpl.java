@@ -11,10 +11,10 @@ import java.util.Scanner;
 public class SpringImpl extends SpringGrpc.SpringImplBase {
     @Override
     public void getZodiacSign(SpringOuterClass.ZodiacRequest request, StreamObserver<SpringOuterClass.ZodiacResponse> responseObserver) {
-        String[][] intervals = new String[4][3];
+        String[][] intervals = new String[4][5];
         try (Scanner scanner = new Scanner(new FileReader("/text/Spring.txt"))) {
             int index = 0;
-            while (index < 4) {
+            while (index < 5) {
                 intervals[index] = scanner.nextLine().split(" ");
                 index++;
             }

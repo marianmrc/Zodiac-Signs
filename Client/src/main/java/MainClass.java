@@ -10,10 +10,10 @@ public class MainClass {
         String date = readData();
 
         if (validation(date)) {
-            System.out.println("Corect");
+            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 3000).usePlaintext().build();
         }
         else {
-            System.out.println("Non");
+
         }
     }
 

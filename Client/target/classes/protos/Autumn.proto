@@ -1,8 +1,9 @@
 syntax = "proto3";
 
-option java_package = "proto";
+option java_package = "autumn";
 
-service Zodiac {
+
+service Autumn {
   rpc getZodiacSign (ZodiacRequest) returns (ZodiacResponse) {}
 }
 

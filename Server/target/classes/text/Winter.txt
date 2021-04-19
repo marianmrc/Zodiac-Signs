@@ -1,0 +1,4 @@
+1 12 21 12 Sagittarius
+22 12 20 1 Capricorn
+21 1 18 2 Aquarius
+19 2 29 2 Pisces

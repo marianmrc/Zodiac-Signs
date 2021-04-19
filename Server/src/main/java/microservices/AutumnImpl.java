@@ -11,10 +11,10 @@ import java.util.Scanner;
 public class AutumnImpl extends AutumnGrpc.AutumnImplBase {
     @Override
     public void getZodiacSign(AutumnOuterClass.ZodiacRequest request, StreamObserver<AutumnOuterClass.ZodiacResponse> responseObserver) {
-        String[][] intervals = new String[4][3];
+        String[][] intervals = new String[4][5];
         try (Scanner scanner = new Scanner(new FileReader("/text/Autumn.txt"))) {
             int index = 0;
-            while (index < 4) {
+            while (index < 5) {
                 intervals[index] = scanner.nextLine().split(" ");
                 index++;
             }

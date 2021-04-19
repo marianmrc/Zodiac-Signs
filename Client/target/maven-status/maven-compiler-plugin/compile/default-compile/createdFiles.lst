@@ -25,7 +25,6 @@ spring\SpringOuterClass$1.class
 autumn\AutumnGrpc$AutumnBlockingStub.class
 spring\SpringGrpc$SpringFutureStub.class
 summer\SummerGrpc$SummerBaseDescriptorSupplier.class
-microservices\SpringImpl.class
 autumn\AutumnOuterClass$1.class
 summer\SummerGrpc$SummerStub.class
 autumn\AutumnOuterClass$ZodiacRequestOrBuilder.class
@@ -55,7 +54,6 @@ summer\Summe$ZodiacResponse$1.class
 winter\WinterOuterClass$ZodiacRequest$Builder.class
 autumn\AutumnGrpc$AutumnMethodDescriptorSupplier.class
 spring\SpringGrpc.class
-microservices\WinterImpl.class
 winter\WinterOuterClass$ZodiacRequest$1.class
 autumn\AutumnGrpc$AutumnFileDescriptorSupplier.class
 summer\Summe$ZodiacRequest.class
@@ -65,10 +63,8 @@ autumn\AutumnGrpc$AutumnFutureStub.class
 spring\SpringGrpc$SpringImplBase.class
 spring\SpringOuterClass$ZodiacRequestOrBuilder.class
 autumn\AutumnOuterClass$ZodiacResponseOrBuilder.class
-microservices\SummerImpl.class
 summer\Summe$ZodiacRequest$1.class
 autumn\AutumnOuterClass$ZodiacResponse.class
-microservices\AutumnImpl.class
 winter\WinterOuterClass$ZodiacRequestOrBuilder.class
 MainClass.class
 spring\SpringGrpc$SpringBlockingStub.class

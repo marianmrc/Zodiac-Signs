@@ -5,22 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed946c5-6088-46b8-82ff-539aef36ef20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/autumn/AutumnGrpc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/autumn/AutumnOuterClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservices/AutumnImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservices/SpringImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservices/SummerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/microservices/WinterImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/text/Autumn.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/text/Spring.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/text/Summe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/text/Winter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/autumn/AutumnGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/spring/SpringGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/spring/SpringOuterClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/summer/Summe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/winter/WinterGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/java/winter/WinterOuterClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/resources/protos/Spring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/resources/protos/Summe.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/src/main/resources/protos/Winter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/target/classes/protos/Autumn.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/target/classes/protos/Spring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/target/classes/protos/Summe.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/target/classes/protos/Winter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/proto/ZodiacGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/summer/SummerGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/java/proto/ZodiacOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/java/autumn/AutumnOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/src/main/resources/zodiac.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../Client/src/main/resources/protos/Autumn.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Client/target/classes/zodiac.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Autumn.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/protos/Autumn.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Spring.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/protos/Spring.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Summe.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/protos/Summe.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Winter.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/protos/Winter.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservices/AutumnImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservices/AutumnImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservices/SpringImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservices/SpringImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservices/SummerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservices/SummerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/microservices/WinterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/microservices/WinterImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/text/Autumn.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/text/Autumn.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/text/Spring.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/text/Spring.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/text/Summe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/text/Summe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/text/Winter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/text/Winter.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +82,14 @@
       <recent name="C:\Users\maria\Desktop\Zodiac-Signs\Server\src\main\resources\protos" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MainClass">
+    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainClass" />
+      <module name="Server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Server" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -90,6 +113,11 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainClass" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

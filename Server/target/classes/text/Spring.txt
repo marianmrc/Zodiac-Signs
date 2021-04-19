@@ -1,0 +1,4 @@
+1 3 20 3 Pisces
+21 3 2 4 Aries
+21 4 21 5 Taurus
+22 5 31 5 Gemini
