@@ -1,4 +1,4 @@
-1 6 21 6 Gemini
-22 6 22 7 Cancer
-23 7 22 8 Leo
-23 8 31 8 Virgo
+6 1 6 21 Gemini
+6 22 7 22 Cancer
+7 23 8 22 Leo
+8 23 8 31 Virgo

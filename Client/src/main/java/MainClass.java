@@ -112,13 +112,16 @@ public class MainClass {
 
     public static boolean validation(String date) {
         String[] dateNumbers = date.split("/");
+
+        if (dateNumbers.length < 3) {
+            return false;
+        }
         int month = Integer.parseInt(dateNumbers[0]);
         int day = Integer.parseInt(dateNumbers[1]);
         int year = Integer.parseInt(dateNumbers[2]);
 
         if (month >= 1 && month <= 12
-                && day <= getMonthDays().get(month)
-                && year % 4 == 1) {
+                && day <= getMonthDays().get(month)) {
             return true;
         }
         return month == 2
