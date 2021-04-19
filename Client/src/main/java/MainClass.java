@@ -15,75 +15,84 @@ import java.util.Scanner;
 public class MainClass {
 
     public static void main(String[] args) {
-        String date = readData();
+        while (true) {
+            String date = readData();
 
-        if (validation(date)) {
-            ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 3000).usePlaintext().build();
+            if (validation(date)) {
+                ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 3000).usePlaintext().build();
 
-            int month = Integer.parseInt(date.split("/")[0]);
-            int day = Integer.parseInt(date.split("/")[1]);
-            int year = Integer.parseInt(date.split("/")[2]);
-            switch (month) {
-                case 12:
-                case 1:
-                case 2:
-                    WinterGrpc.WinterBlockingStub winterBlockingStub = WinterGrpc
-                            .newBlockingStub(channel);
-                    WinterOuterClass.ZodiacResponse zodiacWinter =  winterBlockingStub
-                            .getZodiacSign(
-                            WinterOuterClass.ZodiacRequest
-                                    .newBuilder()
-                                    .setMonth(Integer.toString(month))
-                                    .setDay(Integer.toString(day))
-                                    .setYear(Integer.toString(year)).build());
-                    System.out.println(zodiacWinter.getZodiacSign());
-                    break;
-                case 3:
-                case 4:
-                case 5:
-                    SpringGrpc.SpringBlockingStub springBlockingStub = SpringGrpc
-                            .newBlockingStub(channel);
-                    SpringOuterClass.ZodiacResponse zodiacSpring =  springBlockingStub
-                            .getZodiacSign(
-                                    SpringOuterClass.ZodiacRequest
-                                            .newBuilder()
-                                            .setMonth(Integer.toString(month))
-                                            .setDay(Integer.toString(day))
-                                            .setYear(Integer.toString(year)).build());
-                    System.out.println(zodiacSpring.getZodiacSign());
-                    break;
-                case 6:
-                case 7:
-                case 8:
-                    SummerGrpc.SummerBlockingStub summerBlockingStub = SummerGrpc
-                            .newBlockingStub(channel);
-                    Summe.ZodiacResponse zodiacSummer = summerBlockingStub
-                            .getZodiacSign(
-                                    Summe.ZodiacRequest
-                                            .newBuilder()
-                                            .setMonth(Integer.toString(month))
-                                            .setDay(Integer.toString(day))
-                                            .setYear(Integer.toString(year)).build());
-                    System.out.println(zodiacSummer.getZodiacSign());
-                    break;
-                case 9:
-                case 10:
-                case 11:
-                    AutumnGrpc.AutumnBlockingStub autumnBlockingStub = AutumnGrpc
-                            .newBlockingStub(channel);
-                    AutumnOuterClass.ZodiacResponse zodiacAutumn = autumnBlockingStub
-                            .getZodiacSign(
-                                    AutumnOuterClass.ZodiacRequest
-                                            .newBuilder()
-                                            .setMonth(Integer.toString(month))
-                                            .setDay(Integer.toString(day))
-                                            .setYear(Integer.toString(year)).build());
-                    System.out.println(zodiacAutumn.getZodiacSign());
-                    break;
+                int month = Integer.parseInt(date.split("/")[0]);
+                int day = Integer.parseInt(date.split("/")[1]);
+                int year = Integer.parseInt(date.split("/")[2]);
+                switch (month) {
+                    case 12:
+                    case 1:
+                    case 2:
+                        WinterGrpc.WinterBlockingStub winterBlockingStub = WinterGrpc
+                                .newBlockingStub(channel);
+                        WinterOuterClass.ZodiacResponse zodiacWinter =  winterBlockingStub
+                                .getZodiacSign(
+                                        WinterOuterClass.ZodiacRequest
+                                                .newBuilder()
+                                                .setMonth(Integer.toString(month))
+                                                .setDay(Integer.toString(day))
+                                                .setYear(Integer.toString(year)).build());
+                        System.out.println(zodiacWinter.getZodiacSign());
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                        SpringGrpc.SpringBlockingStub springBlockingStub = SpringGrpc
+                                .newBlockingStub(channel);
+                        SpringOuterClass.ZodiacResponse zodiacSpring =  springBlockingStub
+                                .getZodiacSign(
+                                        SpringOuterClass.ZodiacRequest
+                                                .newBuilder()
+                                                .setMonth(Integer.toString(month))
+                                                .setDay(Integer.toString(day))
+                                                .setYear(Integer.toString(year)).build());
+                        System.out.println(zodiacSpring.getZodiacSign());
+                        break;
+                    case 6:
+                    case 7:
+                    case 8:
+                        SummerGrpc.SummerBlockingStub summerBlockingStub = SummerGrpc
+                                .newBlockingStub(channel);
+                        Summe.ZodiacResponse zodiacSummer = summerBlockingStub
+                                .getZodiacSign(
+                                        Summe.ZodiacRequest
+                                                .newBuilder()
+                                                .setMonth(Integer.toString(month))
+                                                .setDay(Integer.toString(day))
+                                                .setYear(Integer.toString(year)).build());
+                        System.out.println(zodiacSummer.getZodiacSign());
+                        break;
+                    case 9:
+                    case 10:
+                    case 11:
+                        AutumnGrpc.AutumnBlockingStub autumnBlockingStub = AutumnGrpc
+                                .newBlockingStub(channel);
+                        AutumnOuterClass.ZodiacResponse zodiacAutumn = autumnBlockingStub
+                                .getZodiacSign(
+                                        AutumnOuterClass.ZodiacRequest
+                                                .newBuilder()
+                                                .setMonth(Integer.toString(month))
+                                                .setDay(Integer.toString(day))
+                                                .setYear(Integer.toString(year)).build());
+                        System.out.println(zodiacAutumn.getZodiacSign());
+                        break;
+                }
+
+                Scanner read = new Scanner(System.in);
+                System.out.println("Exit?");
+                String exit = read.next();
+                if (exit.equals("yes")) {
+                    System.exit(0);
+                }
             }
-        }
-        else {
-            System.out.println("Invalid data");
+            else {
+                System.out.println("Invalid data");
+            }
         }
     }
 
